@@ -10,7 +10,10 @@
   "plugins": [
     {
       "name": "voice-calibration-plugin",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "raulpetruta/voice-calibration-plugin"
+      },
       "description": "Learns your writing style through interactive prompts and generates a reusable voice profile.",
       "version": "1.0.0",
       "author": {
