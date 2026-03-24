@@ -1,0 +1,21 @@
+{
+  "name": "voice-calibration-marketplace",
+  "owner": {
+    "name": "Raul Petruța"
+  },
+  "metadata": {
+    "description": "Voice calibration plugin — teach AI to write and talk like you.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "voice-calibration-plugin",
+      "source": ".",
+      "description": "Learns your writing style through interactive prompts and generates a reusable voice profile.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Raul Petruța"
+      }
+    }
+  ]
+}
