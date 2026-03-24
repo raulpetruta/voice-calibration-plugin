@@ -2,9 +2,7 @@
 name: voice-calibration
 description: Learns a user's personal writing and speaking style through interactive writing prompts, then generates a reusable voice profile. Use when the user says "learn my writing style," "write like me," "capture my voice," "voice calibration," "mimic my tone," "my writing style," or wants AI to match their personal communication style. Also activates when a .voice-profile.md file exists and the user asks you to write something in their voice.
 license: MIT
-metadata:
-  author: community
-  version: "1.0"
+user-invocable: true
 ---
 
 # Voice Calibration
