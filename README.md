@@ -14,6 +14,8 @@ One command installs the skill for every agent it finds on your machine (Cursor,
 npx skills add raulpetruta/voice-calibration-plugin -g -y
 ```
 
+That installs the skill for every agent the CLI finds. Some agents, such as PromptScript, reject a global install and print a failure for that one target. Codex, Cursor, Claude Code, and the others in the summary still receive the skill.
+
 Or install for one agent:
 
 ```bash
