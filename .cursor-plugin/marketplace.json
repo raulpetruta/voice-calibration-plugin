@@ -1,0 +1,10 @@
+{
+  "name": "voice-calibration-marketplace",
+  "plugins": [
+    {
+      "name": "voice-calibration-plugin",
+      "source": "./",
+      "description": "Learns your writing style through interactive prompts and generates a reusable voice profile."
+    }
+  ]
+}

@@ -17,7 +17,7 @@ Run when the user wants to create or update their voice profile. Guide them thro
 
 ### 2. Application Mode
 
-When a voice profile exists (`.voice-profile.md` in the project root or `~/.claude/voice-profile.md`), read it and apply the style to your writing when the user asks you to write in their voice.
+When a voice profile exists, read it and apply the style to your writing when the user asks you to write in their voice. Check the project root first (`.voice-profile.md`), then `~/.agents/voice-profile.md`, then the legacy path `~/.claude/voice-profile.md`.
 
 ---
 
@@ -71,9 +71,10 @@ For reference on what a finished profile looks like, see [examples/example-profi
 
 Incorporate the user's feedback. Then save the profile:
 
-- **Default location**: `.voice-profile.md` in the current project root
-- **Global location**: `~/.claude/voice-profile.md` (if the user wants it available across projects)
+- **Project location**: `.voice-profile.md` in the current project root
+- **Global location**: `~/.agents/voice-profile.md` (available across projects and across agents)
 - Ask the user which they prefer
+- On a global save, always write `~/.agents/voice-profile.md`. If only the legacy file `~/.claude/voice-profile.md` exists, keep reading it until this save, then write the shared file
 
 Confirm the save and explain how to use it:
 
@@ -85,7 +86,10 @@ Confirm the save and explain how to use it:
 
 When the user asks you to write in their voice and a voice profile exists:
 
-1. Read the `.voice-profile.md` file (check project root first, then `~/.claude/`)
+1. Read the first profile that exists, in this order:
+   - `.voice-profile.md` in the project root
+   - `~/.agents/voice-profile.md`
+   - `~/.claude/voice-profile.md` (legacy; read it only when the shared file is missing)
 2. Internalize the style dimensions — especially **Sample Phrases**, **Tone & Personality**, and **What to Avoid**
 3. Write the requested content matching the profiled style
 4. Do not mention the profile or call attention to the style matching — just write naturally in their voice
@@ -101,6 +105,7 @@ If the user already has a profile and wants to update it:
 - Ask if they want to **start fresh** or **add more samples** to refine the existing profile
 - For refinement: present 3-4 new prompts, re-analyze with the new + original samples combined
 - For fresh start: run the full calibration workflow again
+- When saving the update, write the same location the profile was read from. If it was read from `~/.claude/voice-profile.md`, write `~/.agents/voice-profile.md` instead so every host can find it
 
 ---
 

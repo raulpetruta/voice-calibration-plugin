@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "voice-calibration-plugin",
+  "version": "1.1.0",
+  "description": "Learns your personal writing and speaking style through interactive prompts, then generates a reusable voice profile so AI can write like you.",
+  "author": {
+    "name": "Raul Petruța"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/raulpetruta/voice-calibration-plugin",
+  "keywords": ["voice", "writing-style", "skills"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Voice Calibration",
+        "shortDescription": "Learn your writing style and generate a reusable voice profile.",
+        "developerName": "Raul Petruța",
+        "category": "Productivity"
+      }
+    }
+  }
+}

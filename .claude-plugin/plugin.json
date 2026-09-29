@@ -1,7 +1,7 @@
 {
   "name": "voice-calibration-plugin",
   "description": "Learns your personal writing and speaking style through interactive prompts, then generates a reusable voice profile so AI can write like you.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Raul Petruța"
   }
